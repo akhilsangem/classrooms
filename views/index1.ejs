@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title><%= title %></title>
+<link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<% var test = 101; %>
+<body>
+<% include templates/header.ejs %>
+<h1><%= title %></h1>
+<!-- Dropdown list for room numbers-->
+<div class="form-group" method="post">
+  <form action="/room" method="post">
+  <label for="sel1">Select Building:</label>
+  <select type="submit" id="clubname" name="clubname" class="input-large" id="sel0" onchange=submit()>
+    <% myData.forEach(function(item){ %>
+      <option value=<%= item.BuildingID %>><%= item.BuildingName  %></option>
+    <% }); %>
+  </select>
+</form>
+</div>
+<h2 style="text-align: center">Room Information</h2>
+<h3>Click on a Room ID to change room information</h3>
+<div class="well well-lg table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>BuildingName</th>
+        <th>RoomNum</th>
+        <th>BuildingID</th>
+        <th>RoomID</th>
+        <th>Projector</th>
+        <th>dvd</th>
+        <th>Switcher/Scaler</th>
+        <th>DocCam</th>
+        <th>Mics</th>
+        <th>Amp</th>
+        <th>LaptopEthernet</th>
+        <th>LaptopHDMI</th>
+        <th>LaptopVGA</th>
+        <th>LaptopSound</th>
+        <th>OverHeadCart</th>
+        <th>OverHead</th>
+        <th>PC</th>
+        <th>Camera</th>
+        <th>TouchDisplay</th>
+        <th>Checkdate</th>
+        <th>DocCamModel</th>
+        <th>SwitcherScaler</th>
+        <th>LampHours</th>
+        <th>FilterHours</th>
+        <th>MicFrequency</th>
+        <th>ThickHDMI</th>
+        <th>RackType</th>
+        <th>AvailableLaptopConnections</th>
+        <th>ScreenCondition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% myNewData.forEach(function(item){ %>
+        <tr>
+          <td><%=item.BuildingName%></td>
+          <td><%=item.RoomNum%></td>
+          <td><%=item.BuildingID%></td>
+          <td><a href="/changes:<%= item.RoomID%>/:<%= item.BuildingName%>"><button><%= item.RoomID%></button></a></td>
+          <td><%=item.Projector%></td>
+          <td><%=item.DVDCombo%></td>
+          <td><%=item.SwitcherScaler%></td>
+          <td><%=item.DocCamModel%></td>
+          <td><%=item.MicFrequency%></td>
+          <td><%=item.Amp%></td>
+          <td><%=item.LaptopEthernet%></td>
+          <td><%=item.LaptopHDMI%></td>
+          <td><%=item.LaptopVGA%></td>
+          <td><%=item.LaptopSound%></td>
+          <td><%=item.OverHeadCart%></td>
+          <td><%=item.OverHead%></td>
+          <td><%=item.PC%></td>
+          <td><%=item.Camera%></td>
+          <td><%=item.TouchDisplay%></td>
+          <td><%=item.Checkdate%></td>
+          <td><%=item.DocCamModel%></td>
+          <td><%=item.SwitcherScaler%></td>
+          <td><%=item.LampHours%></td>
+          <td><%=item.FilterHours%></td>
+          <td><%=item.MicFrequency%></td>
+          <td><%=item.ThickHDMI%></td>
+          <td><%=item.RackType%></td>
+          <td><%=item.AvailableLaptopConnections%></td>
+          <td><%=item.ScreenCondition%></td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+  <a href="/changes:newroom/:<%= myNewData[0].BuildingName%>"><button>Add Room</button></a>
+</div>
+
+</body>
+</html>

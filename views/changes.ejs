@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+  <% include templates/header.ejs %>
+  <h1 style="text-align: center"><%= title %></h1>
+  <br>
+  <div class="well well-lg">
+    <form action="/" method="post" style="text-align: right">
+      <div class="col col-md-4 well well-lg">
+        <div class="form-group">
+          <label for="BuildingName">BuildingName:</label>
+          <input type="text" class="form form-sm" name="BuildingName" value="<%= myRoomData.BuildingName %>" >
+        </div>
+        <div class="form-group">
+          <label for="RoomNum">RoomNum:</label>
+          <input type="text" class="form form-sm" value="<%=myRoomData.RoomNum%>" name="RoomNum">
+        </div>
+        <div class="form-group">
+          <label for="BuildingID">BuildingID:</label>
+          <input type="text" class="form form-sm" value="<%=myRoomData.BuildingID%>" name="BuildingID">
+        </div>
+        <div class="form-group">
+          <label for="RoomID">RoomID:</label>
+          <input type="text" value="<%=myRoomData.RoomID%>" class="form form-sm" name="RoomID">
+        </div>
+        <div class="form-group">
+          <label for="RackType">Rack Type:</label>
+          <input type="text" value="<%=myRoomData.RackType%>" class="form form-sm" name="RackType">
+        </div>
+        <div class="form-group">
+          <label for="TeachingStatus">Teaching Area Details:</label>
+          <input type="text" value="<%=myRoomData.TeachingStatus%>" class="form form-sm" name="TeachingStatus">
+        </div>
+        <div class="form-group">
+          <label for="projector">Projector:</label>
+          <input type="text" value="<%=myRoomData.Projector%>" class="form form-sm" name="Projector">
+        </div>
+        <div class="form-group">
+          <label for="LampHours">Lamp Hours:</label>
+          <input type="text" value="<%=myRoomData.LampHours%>" class="form form-sm" name="LampHours">
+        </div>
+        <div class="form-group">
+          <label for="FilterHours">Filter Hours:</label>
+          <input type="text" value="<%=myRoomData.FilterHours%>" class="form form-sm" name="FilterHours">
+        </div>
+        <div class="form-group">
+          <label for="ScreenCondition">Screen Condition:</label>
+          <input type="text" value="<%=myRoomData.ScreenCondition%>" class="form form-sm" name="ScreenCondition">
+        </div>
+        <div class="form-group">
+          <label for="ThickHDMI">Thick HDMI:</label>
+          <input type="text" value="<%=myRoomData.ThickHDMI%>" class="form form-sm" name="ThickHDMI">
+        </div>
+      </div>
+      <div class="col col-md-4 well well-lg">
+        <div class="form-group">
+          <label for="VGADistance">VGA Distance:</label>
+          <input type="text" value="<%=myRoomData.VGADistance%>" class="form form-sm" name="VGADistance">
+        </div>
+        <div class="form-group">
+          <label for="DVDCombo">DVD Combo:</label>
+          <input type="text" value="<%=myRoomData.DVDCombo%>" class="form form-sm" name="DVDCombo">
+        </div>
+        <div class="form-group">
+          <label for="SwitcherScaler">Switcher Scalar:</label>
+          <input type="text" value="<%=myRoomData.SwitcherScaler%>" class="form form-sm" name="SwitcherScaler">
+        </div>
+        <div class="form-group">
+          <label for="DocCamModel">Doc Cam Model:</label>
+          <input type="text" value="<%=myRoomData.DocCamModel%>" class="form form-sm" name="DocCamModel">
+        </div>
+        <div class="form-group">
+          <label for="DocCamConnection">Doc Cam Connections:</label>
+          <input type="text" value="<%=myRoomData.DocCamConnection%>" class="form form-sm" name="DocCamConnection">
+        </div>
+        <div class="form-group">
+          <label for="MicFrequency">Mic Frequency:</label>
+          <input type="text" value="<%=myRoomData.MicFrequency%>" class="form form-sm" name="MicFrequency">
+        </div>
+        <div class="form-group">
+          <label for="Amp">Amp Model:</label>
+          <input type="text" value="<%=myRoomData.Amp%>" class="form form-sm" name="Amp">
+        </div>
+      </div>
+      <div class="col col-md-4  well well-lg">
+        <div class="form-group">
+          <label for="AvailableLaptopConnections">Available Laptop Connections:</label>
+          <input type="text" value="<%=myRoomData.AvailableLaptopConnections%>" class="form form-sm" name="alc">
+        </div>
+        <div class="form-group">
+          <label for="LaptopEthernet">Laptop Ethernet?:</label>
+          <input type="text" value="<%=myRoomData.LaptopEthernet%>" class="form form-sm" name="LaptopEthernet">
+        </div>
+        <div class="form-group">
+          <label for="LaptopHDMI">Laptop HDMI?:</label>
+          <input type="text" value="<%=myRoomData.LaptopHDMI%>" class="form form-sm" name="LaptopHDMI">
+        </div>
+        <div class="form-group">
+          <label for="LaptopVGA">Laptop VGA?:</label>
+          <input type="text" value="<%=myRoomData.LaptopVGA%>" class="form form-sm" name="LaptopVGA">
+        </div>
+        <div class="form-group">
+          <label for="LaptopSound">Laptop Sound?:</label>
+          <input type="text" value="<%=myRoomData.LaptopSound%>" class="form form-sm" name="LaptopSound">
+        </div>
+        <div class="form-group">
+          <label for="OverHead">Overhead Model:</label>
+          <input type="text" value="<%=myRoomData.OverHead%>" class="form form-sm" name="OverHead">
+        </div>
+        <div class="form-group">
+          <label for="OverHeadCart">Overhead Cart:</label>
+          <input type="text" value="<%=myRoomData.OverHeadCart%>" class="form form-sm" name="OverHeadCart">
+        </div>
+        <div class="form-group">
+          <label for="PC">PC:</label>
+          <input type="text" value="<%=myRoomData.PC%>" class="form form-sm" name="pComp">
+        </div>
+        <div class="form-group">
+          <label for="Camera">Camera</label>
+          <input type="text" value="<%=myRoomData.Camera%>" class="form form-sm" name="Camera">
+        </div>
+        <div class="form-group">
+          <label for="TouchDisplay">Touch Display:</label>
+          <input type="text" value="<%=myRoomData.TouchDisplay%>" class="form form-sm" name="TouchDisplay">
+        </div>
+        <div class="form-group">
+          <label for="Checkdate">Last Checked</label>
+          <input type="text" value="<%=myRoomData.Checkdate%>" class="form form-sm" name="Checkdate">
+        </div>
+      </div>
+      <button type="submit" style="text-align: center" class="btn btn-default">Update</button>
+    </form>
+  </div>
+  <!-- <tr>
+  <th>BuildingName</th>
+  <th>RoomNum</th>
+  <th>BuildingID</th>
+  <th>RoomID</th>
+  <th>Projector</th>
+  <th>dvd</th>
+  <th>switch</th>
+  <th>DocCam</th>
+  <th>Mics</th>
+  <th>Amp</th>
+  <th>LaptopEthernet</th>
+  <th>LaptopHDMI</th>
+  <th>LaptopVGA</th>
+  <th>LaptopSound</th>
+  <th>OverHeadCart</th>
+  <th>OverHead</th>
+  <th>PC</th>
+  <th>Camera</th>
+  <th>TouchDisplay</th>
+  <th>Checkdate</th>
+</tr> -->
+</body>
+</html>

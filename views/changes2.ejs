@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title><%= title %></title>
+<link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<% include templates/header.ejs %>
+<h1><%= title %></h1>
+<h1>The room is <%= myRoomData.BuildingName %></h1>
+<p>Welcome to <%= title %></p>
+<p>classroom services</p>
+<div class="col-sm-4 well well-lg">
+<form action="/" method="post" style="text-align: right">
+  <div class="form-group">
+    <label for="BuildingName">BuildingName:</label>
+    <input type="text" class="form form-sm" name="BuildingName" value="<%= myRoomData.BuildingName %>" >
+  </div>
+  <div class="form-group">
+    <label for="RoomNum">RoomNum:</label>
+    <input type="text" class="form form-sm" value="<%=myRoomData.RoomNum%>" name="RoomNum">
+  </div>
+  <div class="form-group">
+    <label for="BuildingID">BuildingID:</label>
+    <input type="text" class="form form-sm" value="<%=myRoomData.BuildingID%>" name="BuildingID">
+  </div>
+  <div class="form-group">
+    <label for="RoomID">RoomID:</label>
+    <input type="text" value=<%=myRoomData%> class="form form-sm" name="RoomID">
+  </div>
+  <div class="form-group">
+    <label for="dvd">dvd:</label>
+    <input type="text" value="<%=myRoomData.dvd%>" class="form form-sm" name="dvd">
+  </div>
+  <div class="form-group">
+    <label for="switch">switch:</label>
+    <input type="text" class="form form-sm" id="switch">
+  </div>
+  <div class="form-group">
+    <label for="BuildingName">BuildingName:</label>
+    <input type="text" class="form form-sm" id="BuildingName">
+  </div>
+  <div class="form-group">
+    <label for="BuildingName">BuildingName:</label>
+    <input type="text" class="form form-sm" id="BuildingName">
+  </div>
+  <div class="form-group">
+    <label for="BuildingName">BuildingName:</label>
+    <input type="text" class="form form-sm" id="BuildingName">
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+</div>
+<!-- <tr>
+  <th>BuildingName</th>
+  <th>RoomNum</th>
+  <th>BuildingID</th>
+  <th>RoomID</th>
+  <th>Projector</th>
+  <th>dvd</th>
+  <th>switch</th>
+  <th>DocCam</th>
+  <th>Mics</th>
+  <th>Amp</th>
+  <th>LaptopEthernet</th>
+  <th>LaptopHDMI</th>
+  <th>LaptopVGA</th>
+  <th>LaptopSound</th>
+  <th>OverHeadCart</th>
+  <th>OverHead</th>
+  <th>PC</th>
+  <th>Camera</th>
+  <th>TouchDisplay</th>
+  <th>Checkdate</th>
+</tr> -->
+</body>
+</html>

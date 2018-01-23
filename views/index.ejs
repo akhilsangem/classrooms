@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title><%= title %></title>
+<link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<% var test = 101; %>
+<body>
+<% include templates/header.ejs %>
+<div id="centerDiv" class="well well-lg" style="text-align:center; padding:10%">
+  <h1><%= title %></h1>
+  <h3>Select a building</h3>
+  <!-- Dropdown list for Buildings-->
+  <div style="text-align:center" class="form-group" method="post">
+    <form action="/room" method="post">
+    <select type="submit" id="clubname" name="clubname" class="input-large" id="sel0" onchange=submit()>
+      <% myData.forEach(function(item){ %>
+        <option value=<%= item.BuildingID  %>><%= item.BuildingName  %></option>
+      <% }); %>
+    </select>
+  </form>
+  </div>
+  <!-- Search Bar For Controls-->
+  <div style="text-align:center" class="form-group" method="post">
+    <form action="/room" method="post">
+      <label for="s1">Control Search:</label>
+        <input type="text" style="width: 200px; display: inline-block" class="form-control" id="s1" placeholder="Enter Control Type" name="controlSearch">
+    </form>
+    <br>
+    <form action="/room" method="post">
+      <label for="s2">Amp Search:</label>
+        <input type="text"  style="width: 200px; display: inline-block" class="form-control" id="s2" placeholder="Enter Amp Model" name="projSearch">
+    </form>
+  </div>
+</div>
+
+
+
+
+</body>
+</html>
